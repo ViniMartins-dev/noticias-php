@@ -4,6 +4,8 @@
         session_start();
     }
 
+    $_SESSION["login"] = false;
+
     function loadHeader () {
         if(!$_SESSION['login']) {
             return headerUser();
@@ -20,7 +22,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Escrever Noticia</a>
+                            <a class="nav-link active" aria-current="page" href="write.php">Escrever Noticia</a>
                         </li>
 
                         <li class="nav-item">
@@ -44,15 +46,15 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Escrever Noticia</a>
+                            <a class="nav-link active" aria-current="page" href="write.php">Escrever Noticia</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Aprovar Noticias</a>
+                            <a class="nav-link active" aria-current="page" href="approval.php">Aprovar Noticias</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Logout</a>
+                            <a class="nav-link active" aria-current="page" href="logout.php">Logout</a>
                         </li>
                         
                     </ul>

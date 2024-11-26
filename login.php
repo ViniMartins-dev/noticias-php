@@ -9,6 +9,31 @@
     <title>login</title>
 </head>
 <body>
-    
+    <div class="container-fluid h-100 mt-5">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-8 col-lg-6 col-xl-4">
+                <form method="POST" action="loginValidate.php">
+                    <!-- Email input -->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <label class="form-label" for="form-user">Usuário</label>
+                        <input type="text" id="form-user" class="form-control form-control-lg"
+                        placeholder="Entre com um usuário válido" name="form-user" required/>
+                    </div>
+
+                    <!-- Password input -->
+                    <div data-mdb-input-init class="form-outline mb-3">
+                        <label class="form-label" for="form-pswd">Senha</label>
+                        <input type="password" id="form-pswd" class="form-control form-control-lg"
+                        placeholder="Entre com uma senha" name="form-pswd" required/>
+                    </div>
+
+                    <div class="text-center text-lg-center mt-4 pt-2">
+                        <input type="submit" class="btn btn-primary btn-lg"
+                        style="padding-left: 2.5rem; padding-right: 2.5rem;" value="Login">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

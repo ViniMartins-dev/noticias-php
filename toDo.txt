@@ -1,4 +1,5 @@
-[] Página para a exibição das notícias publicadas               //index
-[] Pagina para o administrador aprovar as noticias              //aproval
+[-] Página para a exibição das notícias publicadas               //index
+[-] todo o processo de login, logout e controle de sessão.       //login
+
 [] Página para o escritor, criar suas noticias                  //create
-[] todo o processo de login, logout e controle de sessão.       //login
+[] Pagina para o administrador aprovar as noticias              //aproval
