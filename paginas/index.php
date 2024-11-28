@@ -12,6 +12,21 @@
 <body>
     <?php include 'header.php'; loadHeader()?>
 
-	</strong>Index</strong>
+	<div class="container my-4">
+        <h1 class="text-center mb-4">Últimas Notícias</h1>
+        <div class="row g-4">
+        <!-- Notícia 1 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card shadow-sm h-100">
+                <img src="https://placehold.in/300x200" class="card-img-top" alt="Imagem da Notícia">
+                <div class="card-body">
+                    <h5 class="card-title">Título da Notícia 1</h5>
+                    <p class="card-text">Um breve resumo ou descrição sobre a notícia. Saiba mais clicando no botão abaixo.</p>
+                    <a href="#" class="btn btn-primary">Leia mais</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
 </body>
 </html>

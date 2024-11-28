@@ -5,7 +5,7 @@
     }
 
     function loadHeader () {
-        if(!$_SESSION['login']) {
+        if(!isset($_SESSION['login'])) {
             return headerUser();
         } else {
             return headerAdmin();
@@ -27,10 +27,6 @@
                             <a class="nav-link active" aria-current="page" href="login.php"><i class="bi bi-box-arrow-in-left"></i> Logar</a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Buscar Noticia" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
-                    </form>
                 </div>
             </div>
         </nav>';
@@ -48,18 +44,14 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="approval.php"><i class="bi bi-newspaper"></i> Aprovar Noticias</a>
+                            <a class="nav-link active" aria-current="page" href="approval-list.php"><i class="bi bi-newspaper"></i> Aprovar Noticias</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="logout.php"><i class="bi bi-box-arrow-right"></i> Logout</a>
+                            <a class="nav-link active" aria-current="page" href="../script/logout.php"><i class="bi bi-box-arrow-right"></i> Logout</a>
                         </li>
                         
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Buscar Noticia" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
-                    </form>
                 </div>
             </div>
         </nav>';
