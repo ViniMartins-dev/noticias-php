@@ -23,10 +23,10 @@
                             <a class="nav-link active" aria-current="page" href="write.php"><i class="bi bi-pencil-square"></i> Escrever Noticia</a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="login.php"><i class="bi bi-box-arrow-in-left"></i> Logar</a>
-                        </li>
                     </ul>
+                    <span class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="login.php"><i class="bi bi-box-arrow-in-left"></i> Logar</a>
+                    </span>
                 </div>
             </div>
         </nav>';
@@ -47,11 +47,11 @@
                             <a class="nav-link active" aria-current="page" href="approval-list.php"><i class="bi bi-newspaper"></i> Aprovar Noticias</a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../script/logout.php"><i class="bi bi-box-arrow-right"></i> Logout</a>
-                        </li>
                         
                     </ul>
+                    <span class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../script/logout.php"><i class="bi bi-box-arrow-right"></i> Logout</a>
+                    </span>
                 </div>
             </div>
         </nav>';

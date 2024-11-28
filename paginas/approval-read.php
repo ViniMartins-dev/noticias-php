@@ -7,7 +7,10 @@
   <!-- Link do CSS do Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
+  <?php include 'header.php'; loadHeader()?>
+
   <div class="container my-4">
     <!-- Cabeçalho -->
     <header class="mb-4">

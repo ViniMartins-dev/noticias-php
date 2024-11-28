@@ -12,11 +12,20 @@
   <div class="container my-4">
     <h1 class="text-center mb-4">Escrever Nova Notícia</h1>
     <!-- Formulário -->
-    <form action="submit-noticia.php" method="POST" enctype="multipart/form-data">
+    <form action="submit-noticia.php" method="POST">
       <!-- Título -->
-      <div class="mb-3">
-        <label for="titulo" class="form-label">Título da Notícia</label>
-        <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Digite o título" required>
+      <div class="row mb-3">
+        <!-- Título -->
+        <div class="col-md-8">
+          <label for="titulo" class="form-label">Título da Notícia</label>
+          <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Digite o título" required>
+        </div>
+
+        <!-- Upload de Imagem -->
+        <div class="col-md-4">
+          <label for="imagem" class="form-label">Imagem da Notícia</label>
+          <input type="file" class="form-control" id="imagem" name="imagem">
+        </div>
       </div>
 
       <!-- Descrição -->
@@ -30,13 +39,6 @@
         <label for="conteudo" class="form-label">Conteúdo Completo</label>
         <textarea class="form-control" id="conteudo" name="conteudo" rows="8" placeholder="Digite o conteúdo completo da notícia" required></textarea>
       </div>
-
-      <!-- Upload de Imagem -->
-      <div class="mb-3">
-        <label for="imagem" class="form-label">Imagem da Notícia</label>
-        <input type="file" class="form-control" id="imagem" name="imagem" accept="image/*">
-      </div>
-
       <!-- Botões -->
       <div class="text-center">
         <button type="submit" class="btn btn-success">Publicar Notícia</button>

@@ -8,7 +8,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <title>approval</title>
 </head>
+
 <body>
+
+    <?php include 'header.php'; loadHeader()?>
+
     <div class="container my-4">
         <h1 class="text-center mb-4">aprovar noticias</h1>
         <div class="row g-4">
@@ -20,10 +24,13 @@
                     <h5 class="card-title">Título da Notícia 1</h5>
                     <p class="card-text">Um breve resumo ou descrição sobre a notícia. Saiba mais clicando no botão abaixo.</p>
                     <a href="approval-read.php" class="btn btn-primary">Leia mais</a>
+                    <a href="index.html" class="btn btn-success">Aprovar</a>
+                    <a href="index.html" class="btn btn-danger">Reprovar</a>
                 </div>
             </div>
         </div>
         
     </div>
+    
 </body>
 </html>
