@@ -10,6 +10,15 @@
 
 <body>
   <?php include 'header.php'; loadHeader()?>
+  <?php 
+        if(!isset($_SESSION)) {
+            session_start();
+        }
+
+        if(!isset($_SESSION['login'])) {
+            header("location: index.php");
+        } 
+    ?>
 
   <div class="container my-4">
     <!-- Cabeçalho -->

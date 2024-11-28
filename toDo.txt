@@ -1,5 +1,7 @@
-[-] Página para a exibição das notícias publicadas               //index
-[-] todo o processo de login, logout e controle de sessão.       //login
+[x] todo o processo de login, logout e controle de sessão.       //login
+[x] Página para a exibição das notícias publicadas               //index
+[x] Página para o escritor, criar suas noticias                  //create
+[x] Pagina para o administrador aprovar as noticias              //aproval
 
-[] Página para o escritor, criar suas noticias                  //create
-[] Pagina para o administrador aprovar as noticias              //aproval
+[] puxar noticias do banco
+[] inserir noticias no banco
