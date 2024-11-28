@@ -12,3 +12,14 @@
     
 </body>
 </html>
+
+<?php 
+
+	 if(!isset($_SESSION)) {
+        session_start();
+    }
+
+    $_SESSION["login"] = false;
+
+	header("location: index.php");
+?>

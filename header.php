@@ -4,8 +4,6 @@
         session_start();
     }
 
-    $_SESSION["login"] = false;
-
     function loadHeader () {
         if(!$_SESSION['login']) {
             return headerUser();
@@ -22,11 +20,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="write.php">Escrever Noticia</a>
+                            <a class="nav-link active" aria-current="page" href="write.php"><i class="bi bi-pencil-square"></i> Escrever Noticia</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="login.php">Logar como administrador</a>
+                            <a class="nav-link active" aria-current="page" href="login.php"><i class="bi bi-box-arrow-in-left"></i> Logar</a>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
@@ -46,15 +44,15 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="write.php">Escrever Noticia</a>
+                            <a class="nav-link active" aria-current="page" href="write.php"><i class="bi bi-pencil-square"></i> Escrever Noticia</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="approval.php">Aprovar Noticias</a>
+                            <a class="nav-link active" aria-current="page" href="approval.php"><i class="bi bi-newspaper"></i> Aprovar Noticias</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="logout.php">Logout</a>
+                            <a class="nav-link active" aria-current="page" href="logout.php"><i class="bi bi-box-arrow-right"></i> Logout</a>
                         </li>
                         
                     </ul>

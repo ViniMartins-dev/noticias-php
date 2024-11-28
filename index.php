@@ -12,6 +12,6 @@
 <body>
     <?php include 'header.php'; loadHeader()?>
 
-
+	</strong>Index</strong>
 </body>
 </html>
