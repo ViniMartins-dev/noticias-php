@@ -7,10 +7,9 @@
     $conteudo = $_POST['conteudo'];
     $data = date("y/m/d");
 
-    echo $data;
-
     $sql_query = $conn->query("INSERT INTO noticias (titulo, descricao, corpo, imagem, publicacao, aprovado)
                 VALUES ('$titulo', '$descricao', '$conteudo', NULL, '$data', 0)");
 
-    header("location: index.php")
+    echo 'sua noticia será enviada para análise...</br> Renornando à página principal';
+    header('Refresh: 3; URL=/noticias-php/paginas/index.php');
 ?>

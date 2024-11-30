@@ -6,6 +6,6 @@
 
     session_destroy();
 
-    header("Location: ../paginas/index.php");
+    header("Location: /noticias-php/paginas/index.php");
 
 ?>

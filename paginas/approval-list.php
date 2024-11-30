@@ -12,6 +12,8 @@
 <body>
 
     <?php include 'header.php'; loadHeader()?>
+    <?php include '../script/db_conn.php'; ?>
+
 
     <?php 
         if(!isset($_SESSION)) {
@@ -26,37 +28,51 @@
     <div class="container my-4">
         <h1 class="text-center mb-4">aprovar noticias</h1>
         <div class="row g-4">
-        <!-- Notícia 1 -->
-        <div class="col-md-6 col-lg-4">
-            <div class="card shadow-sm h-100">
-                <img src="https://placehold.in/300x200" class="card-img-top" alt="Imagem da Notícia">
-                <div class="card-body">
-                    <h5 class="card-title">Título da Notícia 1</h5>
-                    <p class="card-text">Um breve resumo ou descrição sobre a notícia. Saiba mais clicando no botão abaixo.</p>
-                    <a href="approval-read.php" class="btn btn-primary">Leia mais</a>
-                    <a href="index.html" class="btn btn-success">Aprovar</a>
-                    <a href="index.html" class="btn btn-danger">Reprovar</a>
-                </div>
-            </div>
-        </div>
+
+        <?php
+            $sql_query = $conn->query("SELECT * FROM noticias WHERE aprovado = 0");
+
+            while ($noticia = $sql_query->fetch_assoc()) {
+                echo "
+                    <div class='col-md-6 col-lg-4'>
+                        <div class='card shadow-sm h-100'>
+                            <img src='https://placehold.in/300x200' class='card-img-top' alt='Imagem da Notícia'>
+                            <div class='card-body'>
+                                <h5 class='card-title'>" . $noticia['titulo'] . "</h5>
+                                <p class='card-text'>" . $noticia['descricao'] . ". Saiba mais clicando no botão abaixo.</p>
+                                <a href='approval-read.php/?id='". $noticia['id'] ."' class='btn btn-primary'>Leia mais</a>
+                                <a href='../script/approve.php/?id=". $noticia['id'] ."' class='btn btn-success'>Aprovar</a>
+                                <a href='../script/delete.php/?id=". $noticia['id'] ."' class='btn btn-danger'>Reprovar</a>
+                            </div>
+                        </div>
+                    </div>
+                ";
+            }
+        ?>
     </div>
 
     <div class="container my-4">
         <h1 class="text-center mb-4">Noticias aprovadas</h1>
         <div class="row g-4">
-        <!-- Notícia 1 -->
-        <div class="col-md-6 col-lg-4">
-            <div class="card shadow-sm h-100">
-                <img src="https://placehold.in/300x200" class="card-img-top" alt="Imagem da Notícia">
-                <div class="card-body">
-                    <h5 class="card-title">Título da Notícia 1</h5>
-                    <p class="card-text">Um breve resumo ou descrição sobre a notícia. Saiba mais clicando no botão abaixo.</p>
-                    <a href="approval-read.php" class="btn btn-primary">Leia mais</a>
-                    <a href="index.html" class="btn btn-danger">deletar</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
+        <?php
+            $sql_query = $conn->query("SELECT * FROM noticias WHERE aprovado = 1");
+
+            while ($noticia = $sql_query->fetch_assoc()) {
+                echo "
+                    <div class='col-md-6 col-lg-4'>
+                        <div class='card shadow-sm h-100'>
+                            <img src='https://placehold.in/300x200' class='card-img-top' alt='Imagem da Notícia'>
+                            <div class='card-body'>
+                                <h5 class='card-title'>" . $noticia['titulo'] . "</h5>
+                                <p class='card-text'>" . $noticia['descricao'] . ". Saiba mais clicando no botão abaixo.</p>
+                                <a href='approval-read.php' class='btn btn-primary'>Leia mais</a>
+                                <a href='../script/delete.php/?id=". $noticia['id'] ."' class='btn btn-danger'>deletar</a>
+                            </div>
+                        </div>
+                    </div>
+                ";
+            }
+        ?>
 </body>
 </html>

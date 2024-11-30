@@ -15,10 +15,10 @@
 
 		$_SESSION["login"] = true;
 		
-		header("location: ../paginas/index.php");
+		header("location: /noticias-php/paginas/index.php");
 
     }else {
         echo "email ou senha inválidos <br />Redirecionando...";
-        header('Refresh: 3; URL=../paginas/login.php');
+        header('Refresh: 3; URL=/noticias-php/paginas/login.php');
     }
 ?>

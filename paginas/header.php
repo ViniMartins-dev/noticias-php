@@ -1,19 +1,21 @@
 <?php
 
-    if(!isset($_SESSION)) {
-        session_start();
-    }
+if (!isset($_SESSION)) {
+    session_start();
+}
 
-    function loadHeader () {
-        if(!isset($_SESSION['login'])) {
-            return headerUser();
-        } else {
-            return headerAdmin();
-        }
+function loadHeader()
+{
+    if (!isset($_SESSION['login'])) {
+        return headerUser();
+    } else {
+        return headerAdmin();
     }
+}
 
-    function headerUser() {
-        echo '<nav class="navbar navbar-expand-lg bg-body-tertiary">
+function headerUser()
+{
+    echo '<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top ">
             <div class="container-fluid">
                 <a href="index.php" class="navbar-brand">Portal de Noticias</a>
                 
@@ -30,10 +32,11 @@
                 </div>
             </div>
         </nav>';
-    }
-    
-    function headerAdmin() {
-        echo '<nav class="navbar navbar-expand-lg bg-body-tertiary">
+}
+
+function headerAdmin()
+{
+    echo '<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
             <div class="container-fluid">
                 <a href="index.php" class="navbar-brand">Portal de Noticias</a>
                 
@@ -55,5 +58,5 @@
                 </div>
             </div>
         </nav>';
-    }
+}
 ?>
