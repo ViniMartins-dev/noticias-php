@@ -53,7 +53,7 @@ function headerAdmin()
                         
                     </ul>
                     <span class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/noticias-php/script/logout.php" class="bi bi-box-arrow-right"></i> Logout</a>
+                        <a class="nav-link active" aria-current="page" href="/noticias-php/script/logout.php"><i class="bi bi-box-arrow-in-right"></i> Logout</a>
                     </span>
                 </div>
             </div>
