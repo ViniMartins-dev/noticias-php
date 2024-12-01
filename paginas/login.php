@@ -18,14 +18,13 @@
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-md-8 col-lg-6 col-xl-4">
                 <form method="POST" action="../script/loginValidate.php">
-                    <!-- Email input -->
+
                     <div data-mdb-input-init class="form-outline mb-4">
                         <label class="form-label" for="form-user">Usuário</label>
                         <input type="text" id="form-user" class="form-control form-control-lg"
                             placeholder="Entre com um usuário válido" name="form-user" required />
                     </div>
 
-                    <!-- Password input -->
                     <div data-mdb-input-init class="form-outline mb-3">
                         <label class="form-label" for="form-pswd">Senha</label>
                         <input type="password" id="form-pswd" class="form-control form-control-lg"

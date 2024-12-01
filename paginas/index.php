@@ -29,10 +29,10 @@
                     echo "
                         <div class='col-md-6 col-lg-4'>
                             <div class='card shadow-sm h-100'>
-                                <img src='https://placehold.in/300x200' class='card-img-top' alt='Imagem da Notícia'>
+                            <img src='". $noticia['imagem'] ."' class='card-img-top' alt='Imagem da Notícia' style='width: 100%; height: 200px; object-fit: cover;'>
                                 <div class='card-body'>
                                     <h5 class='card-title'>" . $noticia['titulo'] . "</h5>
-                                    <p class='card-text'>" . $noticia['descricao'] . ". Saiba mais clicando no botão abaixo.</p>
+                                    <p class='card-text'>" . $noticia['descricao'] . ". <br>Saiba mais clicando no botão abaixo.</p>
                                     <a href='read.php/?id=" . $noticia['id'] . "' class='btn btn-primary'>Leia mais</a>
                                 </div>
                             </div>

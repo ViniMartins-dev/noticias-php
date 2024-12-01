@@ -5,49 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notícia Detalhada</title>
-    <!-- Link do CSS do Bootstrap -->
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
+    <?php 
+        include 'header.php';
+        include '../script/db_conn.php';
+        loadHeader() ;
+
+        if (!isset($_SESSION)) {
+            session_start();
+        }
+
+        
+        $id = intval($_GET['id']);
+        $sql_query = $conn->query("SELECT * FROM noticias WHERE id = $id");
+        $noticia = $sql_query->fetch_assoc();
+        
+        
+        list($ano, $mes, $dia) = explode("-", $noticia['publicacao']);
+        
+        if (!isset($_SESSION['login']) and $noticia['aprovado'] == 0) {
+            echo '<p class="text-center text-danger">você precisa estar para ler essa noticia</p>';
+            exit;
+        }
+    ?>
+
     <div class="container my-4">
-        <!-- Cabeçalho -->
+
         <header class="mb-4">
-            <h1 class="text-center">Título da Notícia</h1>
-            <p class="text-center text-muted">Publicado em 28 de novembro de 2024</p>
+            <h1 class="text-center"><?php echo $noticia['titulo']?></h1>
+            <p class="text-center text-muted">Publicado em <?php echo $dia.'/'.$mes.'/'.$ano;?></p>
         </header>
 
-        <!-- Imagem da Notícia -->
         <div class="text-center mb-4">
-            <img src="https://via.placeholder.com/800x400" class="img-fluid rounded" alt="Imagem da notícia">
+            <img src="/noticias-php<?php echo preg_replace('/\.\./', '', $noticia['imagem']);?>" class="img-fluid rounded" alt="Imagem da notícia" style="width: 800px; height: 300px; object-fit: cover;" >
         </div>
 
-        <!-- Conteúdo da Notícia -->
         <article>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
-                Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
-            </p>
-            <p>
-                Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
-                Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
-                per inceptos himenaeos. Curabitur sodales ligula in libero.
-            </p>
-            <p>
-                Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam.
-                In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem.
-                Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non,
-                massa.
-            </p>
+           <?php echo '<p>'.$noticia['corpo'].'</p>'?>
         </article>
 
-        <!-- Botão para Voltar -->
         <div class="text-center mt-4">
-            <a href="index.html" class="btn btn-primary">Voltar para Página Inicial</a>
+            <a href="<?php if(isset($_SESSION['login'])) {echo "/noticias-php/paginas/approval-list.php";} else {echo "/noticias-php/paginas/index.php";}?>" class="btn btn-primary">Voltar</a>
         </div>
     </div>
 
-    <!-- Link do JavaScript do Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

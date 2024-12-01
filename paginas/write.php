@@ -17,7 +17,7 @@
     <div class="container my-4">
         <h1 class="text-center mb-4">Escrever Nova Notícia</h1>
 
-        <form action="/noticias-php/script/submit-noticia.php" method="POST">
+        <form action="/noticias-php/script/submit-noticia.php" method="POST" enctype="multipart/form-data">
 
             <div class="row mb-3">
 
@@ -30,7 +30,7 @@
 
                 <div class="col-md-4">
                     <label for="imagem" class="form-label">Imagem da Notícia</label>
-                    <input type="file" class="form-control" id="imagem" name="imagem">
+                    <input type="file" class="form-control" id="imagem" name="imagem" >
                 </div>
             </div>
 
