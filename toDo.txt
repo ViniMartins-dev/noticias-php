@@ -1,7 +1,8 @@
-[x] todo o processo de login, logout e controle de sessão.       //login
-[x] Página para a exibição das notícias publicadas               //index
-[x] Página para o escritor, criar suas noticias                  //create
-[x] Pagina para o administrador aprovar as noticias              //aproval
+[x] todo o processo de login, logout e controle de sessão.       
+[x] Página para a exibição das notícias publicadas              
+[x] Página para o escritor, criar suas noticias                 
+[x] Pagina para o administrador aprovar as noticias              
+[x] puxar noticias do banco
+[x] inserir noticias no banco
 
-[] puxar noticias do banco
-[] inserir noticias no banco
+[] arrumar algumas roas, o header não consegue redirecionar na página de aprovação por caminho relativo
