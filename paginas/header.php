@@ -17,12 +17,12 @@ function headerUser()
 {
     echo '<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top ">
             <div class="container-fluid">
-                <a href="index.php" class="navbar-brand">Portal de Noticias</a>
+                <a href="/noticias-php/paginas/index.php" class="navbar-brand">Portal de Noticias</a>
                 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="write.php"><i class="bi bi-pencil-square"></i> Escrever Noticia</a>
+                            <a class="nav-link active" aria-current="page" href="/noticias-php/paginas/write.php"><i class="bi bi-pencil-square"></i> Escrever Noticia</a>
                         </li>
 
                     </ul>
@@ -38,16 +38,16 @@ function headerAdmin()
 {
     echo '<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
             <div class="container-fluid">
-                <a href="index.php" class="navbar-brand">Portal de Noticias</a>
+                <a href="/noticias-php/paginas/index.php" class="navbar-brand">Portal de Noticias</a>
                 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="write.php"><i class="bi bi-pencil-square"></i> Escrever Noticia</a>
+                            <a class="nav-link active" aria-current="page" href="/noticias-php/paginas/write.php"><i class="bi bi-pencil-square"></i> Escrever Noticia</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="approval-list.php"><i class="bi bi-newspaper"></i> Aprovar Noticias</a>
+                            <a class="nav-link active" aria-current="page" href="/noticias-php/paginas/approval-list.php"><i class="bi bi-newspaper"></i> Aprovar Noticias</a>
                         </li>
 
                         

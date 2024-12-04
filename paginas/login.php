@@ -17,7 +17,7 @@
     <div class="container-fluid h-100 mt-5">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-md-8 col-lg-6 col-xl-4">
-                <form method="POST" action="../script/loginValidate.php">
+                <form method="POST" action="/noticias-php/script/loginValidate.php">
 
                     <div data-mdb-input-init class="form-outline mb-4">
                         <label class="form-label" for="form-user">Usuário</label>

@@ -5,7 +5,7 @@
 
 
     $imagem = $_FILES['imagem']['name'];
-    $diretorio = "../imagens/"; 
+    $diretorio = "/imagens/"; 
     $caminhoTemp = $_FILES['imagem']['tmp_name']; 
     $destino = $diretorio . basename($imagem);
     
