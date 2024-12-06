@@ -34,6 +34,7 @@
         
         if (!isset($_SESSION['login']) and $noticia['aprovado'] == 0) {
             echo '<p class="text-center text-danger">você precisa estar logado para ler essa noticia</p>';
+            header('Refresh: 3; URL=/noticias-php/paginas/index.php');
             exit;
         }
     ?>

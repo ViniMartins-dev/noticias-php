@@ -52,20 +52,20 @@ INSERT INTO `noticias` (`id`, `titulo`, `descricao`, `corpo`, `imagem`, `publica
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `user`
+-- Estrutura para tabela `admin`
 --
 
-CREATE TABLE `user` (
+CREATE TABLE `admin` (
   `id` int(3) NOT NULL,
   `login` varchar(255) NOT NULL,
   `senha` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `user`
+-- Despejando dados para a tabela `admin`
 --
 
-INSERT INTO `user` (`id`, `login`, `senha`) VALUES
+INSERT INTO `admin` (`id`, `login`, `senha`) VALUES
 (2, 'admin', 'admin');
 
 --
@@ -79,9 +79,9 @@ ALTER TABLE `noticias`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `user`
+-- Índices de tabela `admin`
 --
-ALTER TABLE `user`
+ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -95,9 +95,9 @@ ALTER TABLE `noticias`
   MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
--- AUTO_INCREMENT de tabela `user`
+-- AUTO_INCREMENT de tabela `admin`
 --
-ALTER TABLE `user`
+ALTER TABLE `admin`
   MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 

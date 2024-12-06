@@ -14,6 +14,17 @@
 </head>
     
 <body>
+
+    <?php 
+        if(!isset($_SESSION)) {
+            session_start();
+        }
+
+        if(!isset($_SESSION['login'])) {
+            header("location: /noticias-php/paginas/index.php");
+        } 
+    ?>
+
     <div class="container my-4">
         <h1 class="text-center mb-4">Escrever Nova Notícia</h1>
 
